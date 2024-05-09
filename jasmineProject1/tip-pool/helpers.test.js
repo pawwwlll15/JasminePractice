@@ -35,7 +35,17 @@ describe("Helpers test (with setup and tear-down)", function() {
 
         expect(newTr.children.length).toEqual(1);
         expect(newTr.firstChild.innerHTML).toEqual('testing');
-    })
+    });
+
+    it('should create a "td" element with the value "x"', ()=>{
+        let newTr = document.createElement('tr');
+        let deleteTd = document.createElement('td');
+        deleteTd.textContent = 'X';
+
+        appendDeleteBtn(newTr);
+
+        expect(deleteTd.textContent).toEqual('X');  
+    }); 
 
     /* anything that stores information gets cleared and reset */
     afterEach(function() {

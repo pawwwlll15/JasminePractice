@@ -29,9 +29,10 @@ function appendTd(tr, value) {
 function appendDeleteBtn(tr){
   let deleteTd = document.createElement('td');
   deleteTd.textContent = 'X';
-  addEventListener('click',()=>{
-    deleteTd.parentElement.remove();
-  })
+ deleteTd.addEventListener('click',function(e){
+    e.target.parentElement.remove();
+
+  });
   tr.append(deleteTd);
 }
 

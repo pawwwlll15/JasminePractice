@@ -76,6 +76,15 @@ describe('Testing Payment section of program',() =>{
         expect(curPayment).toEqual(undefined);
     });
 
+    it('should create a "td" element with the value "x"', ()=>{
+        let newTr = document.createElement('tr');
+        let deleteTd = document.createElement('td');
+        deleteTd.textContent = 'X';
+
+        appendDeleteBtn(newTr);
+
+        expect(deleteTd.textContent).toEqual('X');  
+    }); 
 
 
 
